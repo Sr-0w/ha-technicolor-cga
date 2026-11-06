@@ -80,3 +80,15 @@ class SummaryTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TimeoutSpellingTest(unittest.TestCase):
+    """The gateway writes "time-out", "timeout" and "time out"."""
+
+    def test_spellings(self):
+        categorize = parser.categorize
+        CATEGORY_T3_TIMEOUT, CATEGORY_T4_TIMEOUT = parser.CATEGORY_T3_TIMEOUT, parser.CATEGORY_T4_TIMEOUT
+        text = "Received Response to Broadcast Maintenance Request, But no Unicast Maintenance opportunities received - T4 time out"
+        self.assertEqual(categorize(text), CATEGORY_T4_TIMEOUT)
+        self.assertEqual(categorize("No Ranging Response received - T3 time-out"), CATEGORY_T3_TIMEOUT)
+        self.assertEqual(categorize("No Ranging Response received - T3 timeout"), CATEGORY_T3_TIMEOUT)

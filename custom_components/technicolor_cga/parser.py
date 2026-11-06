@@ -45,8 +45,8 @@ _CATEGORY_RULES: tuple[tuple[str, re.Pattern[str]], ...] = (
     # A (re-)registration marks the end of an outage: one per lost connection.
     (CATEGORY_DISCONNECTION, re.compile(r"^CM State is operational", re.I)),
     (CATEGORY_REBOOT, re.compile(r"(Cable Modem Reboot|Resetting the cable modem)", re.I)),
-    (CATEGORY_T3_TIMEOUT, re.compile(r"T3 time-?out", re.I)),
-    (CATEGORY_T4_TIMEOUT, re.compile(r"T4 time-?out", re.I)),
+    (CATEGORY_T3_TIMEOUT, re.compile(r"T3 time[- ]?out", re.I)),
+    (CATEGORY_T4_TIMEOUT, re.compile(r"T4 time[- ]?out", re.I)),
     (
         CATEGORY_SYNC_LOSS,
         re.compile(r"(SYNC Timing Synchronization failure|Lost MDD Timeout|Loss of Sync)", re.I),
