@@ -1,0 +1,609 @@
+{
+ "DSTbl": [
+  {
+   "__id": "1",
+   "ChannelID": "1",
+   "Frequency": "442 MHz",
+   "PowerLevel": "5.6 dBmV",
+   "SNRLevel": "40.2 dB",
+   "Modulation": "256-QAM",
+   "Octets": "3656351739",
+   "Correcteds": "14009",
+   "Uncorrectables": "0",
+   "LockStatus": "Locked",
+   "ChannelType": "SC-QAM"
+  },
+  {
+   "__id": "2",
+   "ChannelID": "2",
+   "Frequency": "450 MHz",
+   "PowerLevel": "5.9 dBmV",
+   "SNRLevel": "39.7 dB",
+   "Modulation": "256-QAM",
+   "Octets": "3656815038",
+   "Correcteds": "13999",
+   "Uncorrectables": "0",
+   "LockStatus": "Locked",
+   "ChannelType": "SC-QAM"
+  },
+  {
+   "__id": "3",
+   "ChannelID": "3",
+   "Frequency": "458 MHz",
+   "PowerLevel": "6.0 dBmV",
+   "SNRLevel": "40.2 dB",
+   "Modulation": "256-QAM",
+   "Octets": "3656994537",
+   "Correcteds": "14050",
+   "Uncorrectables": "0",
+   "LockStatus": "Locked",
+   "ChannelType": "SC-QAM"
+  },
+  {
+   "__id": "4",
+   "ChannelID": "4",
+   "Frequency": "466 MHz",
+   "PowerLevel": "6.3 dBmV",
+   "SNRLevel": "40.3 dB",
+   "Modulation": "256-QAM",
+   "Octets": "3657015536",
+   "Correcteds": "14042",
+   "Uncorrectables": "0",
+   "LockStatus": "Locked",
+   "ChannelType": "SC-QAM"
+  },
+  {
+   "__id": "5",
+   "ChannelID": "5",
+   "Frequency": "482 MHz",
+   "PowerLevel": "7.3 dBmV",
+   "SNRLevel": "39.8 dB",
+   "Modulation": "256-QAM",
+   "Octets": "3636578567",
+   "Correcteds": "13263",
+   "Uncorrectables": "0",
+   "LockStatus": "Locked",
+   "ChannelType": "SC-QAM"
+  },
+  {
+   "__id": "6",
+   "ChannelID": "6",
+   "Frequency": "490 MHz",
+   "PowerLevel": "7.5 dBmV",
+   "SNRLevel": "40.5 dB",
+   "Modulation": "256-QAM",
+   "Octets": "3636586978",
+   "Correcteds": "13162",
+   "Uncorrectables": "0",
+   "LockStatus": "Locked",
+   "ChannelType": "SC-QAM"
+  },
+  {
+   "__id": "7",
+   "ChannelID": "7",
+   "Frequency": "498 MHz",
+   "PowerLevel": "7.6 dBmV",
+   "SNRLevel": "40.4 dB",
+   "Modulation": "256-QAM",
+   "Octets": "3636609556",
+   "Correcteds": "12954",
+   "Uncorrectables": "0",
+   "LockStatus": "Locked",
+   "ChannelType": "SC-QAM"
+  },
+  {
+   "__id": "8",
+   "ChannelID": "8",
+   "Frequency": "506 MHz",
+   "PowerLevel": "7.5 dBmV",
+   "SNRLevel": "40.5 dB",
+   "Modulation": "256-QAM",
+   "Octets": "3636616545",
+   "Correcteds": "12531",
+   "Uncorrectables": "0",
+   "LockStatus": "Locked",
+   "ChannelType": "SC-QAM"
+  },
+  {
+   "__id": "9",
+   "ChannelID": "9",
+   "Frequency": "514 MHz",
+   "PowerLevel": "7.7 dBmV",
+   "SNRLevel": "40.5 dB",
+   "Modulation": "256-QAM",
+   "Octets": "3636641626",
+   "Correcteds": "12836",
+   "Uncorrectables": "0",
+   "LockStatus": "Locked",
+   "ChannelType": "SC-QAM"
+  },
+  {
+   "__id": "10",
+   "ChannelID": "10",
+   "Frequency": "522 MHz",
+   "PowerLevel": "7.7 dBmV",
+   "SNRLevel": "40.5 dB",
+   "Modulation": "256-QAM",
+   "Octets": "3636644175",
+   "Correcteds": "13041",
+   "Uncorrectables": "0",
+   "LockStatus": "Locked",
+   "ChannelType": "SC-QAM"
+  },
+  {
+   "__id": "11",
+   "ChannelID": "11",
+   "Frequency": "530 MHz",
+   "PowerLevel": "8.0 dBmV",
+   "SNRLevel": "40.2 dB",
+   "Modulation": "256-QAM",
+   "Octets": "3636653653",
+   "Correcteds": "12932",
+   "Uncorrectables": "0",
+   "LockStatus": "Locked",
+   "ChannelType": "SC-QAM"
+  },
+  {
+   "__id": "12",
+   "ChannelID": "12",
+   "Frequency": "538 MHz",
+   "PowerLevel": "7.9 dBmV",
+   "SNRLevel": "40.5 dB",
+   "Modulation": "256-QAM",
+   "Octets": "3636661016",
+   "Correcteds": "13364",
+   "Uncorrectables": "0",
+   "LockStatus": "Locked",
+   "ChannelType": "SC-QAM"
+  },
+  {
+   "__id": "13",
+   "ChannelID": "13",
+   "Frequency": "546 MHz",
+   "PowerLevel": "7.9 dBmV",
+   "SNRLevel": "40.4 dB",
+   "Modulation": "256-QAM",
+   "Octets": "3636671329",
+   "Correcteds": "14010",
+   "Uncorrectables": "0",
+   "LockStatus": "Locked",
+   "ChannelType": "SC-QAM"
+  },
+  {
+   "__id": "14",
+   "ChannelID": "14",
+   "Frequency": "554 MHz",
+   "PowerLevel": "7.9 dBmV",
+   "SNRLevel": "40.3 dB",
+   "Modulation": "256-QAM",
+   "Octets": "3636677013",
+   "Correcteds": "14680",
+   "Uncorrectables": "0",
+   "LockStatus": "Locked",
+   "ChannelType": "SC-QAM"
+  },
+  {
+   "__id": "15",
+   "ChannelID": "15",
+   "Frequency": "562 MHz",
+   "PowerLevel": "7.9 dBmV",
+   "SNRLevel": "40.2 dB",
+   "Modulation": "256-QAM",
+   "Octets": "3636677844",
+   "Correcteds": "14620",
+   "Uncorrectables": "0",
+   "LockStatus": "Locked",
+   "ChannelType": "SC-QAM"
+  },
+  {
+   "__id": "16",
+   "ChannelID": "16",
+   "Frequency": "570 MHz",
+   "PowerLevel": "7.7 dBmV",
+   "SNRLevel": "40.1 dB",
+   "Modulation": "256-QAM",
+   "Octets": "3636687986",
+   "Correcteds": "15075",
+   "Uncorrectables": "0",
+   "LockStatus": "Locked",
+   "ChannelType": "SC-QAM"
+  }
+ ],
+ "exDSTbl": [
+  {
+   "__id": "1",
+   "ChannelID": "162",
+   "ChannelIndex": "17",
+   "StartFrequency": "624 MHz",
+   "PLCFrequency": "632 MHz",
+   "CentralFrequency": "706 MHz",
+   "BandWidth": "164 MHz",
+   "PowerLevel": "10.1 dBmV",
+   "SNRLevel": "43.37 dB",
+   "FFT": "256-qam/1024-qam/2048-qam/4096-qam",
+   "LockStatus": "Locked",
+   "Profile": "3",
+   "ChannelType": "OFDM"
+  }
+ ],
+ "USTbl": [
+  {
+   "__id": "1",
+   "ChannelID": "1",
+   "Frequency": "37.2 MHz",
+   "PowerLevel": "34.5 dBmV",
+   "ChannelType": "SC-QAM",
+   "SymbolRate": "5120000",
+   "Modulation": "32-qam",
+   "LockStatus": "Locked"
+  },
+  {
+   "__id": "2",
+   "ChannelID": "2",
+   "Frequency": "44.2 MHz",
+   "PowerLevel": "34.5 dBmV",
+   "ChannelType": "SC-QAM",
+   "SymbolRate": "5120000",
+   "Modulation": "32-qam",
+   "LockStatus": "Locked"
+  },
+  {
+   "__id": "3",
+   "ChannelID": "3",
+   "Frequency": "50.7 MHz",
+   "PowerLevel": "34.5 dBmV",
+   "ChannelType": "SC-QAM",
+   "SymbolRate": "5120000",
+   "Modulation": "32-qam",
+   "LockStatus": "Locked"
+  },
+  {
+   "__id": "4",
+   "ChannelID": "4",
+   "Frequency": "57.2 MHz",
+   "PowerLevel": "35.0 dBmV",
+   "ChannelType": "SC-QAM",
+   "SymbolRate": "5120000",
+   "Modulation": "32-qam",
+   "LockStatus": "Locked"
+  }
+ ],
+ "exUSTbl": [
+  {
+   "__id": "1",
+   "ChannelID": "5",
+   "ChannelIndex": "5",
+   "StartFrequency": "110.500000 MHz",
+   "PowerLevel": "29.2 dBmV",
+   "PLCFrequency": "106.800000 MHz",
+   "CentralFrequency": "138 MHz",
+   "BandWidth": "57 MHz",
+   "FFT": "16-qam",
+   "LockStatus": "Locked",
+   "ChannelType": "OFDMA"
+  }
+ ],
+ "ErrTbl": [
+  {
+   "__id": "1",
+   "Octets": "3656351739",
+   "Correcteds": "14009",
+   "Uncorrectables": "0"
+  },
+  {
+   "__id": "2",
+   "Octets": "3656815038",
+   "Correcteds": "13999",
+   "Uncorrectables": "0"
+  },
+  {
+   "__id": "3",
+   "Octets": "3656994537",
+   "Correcteds": "14050",
+   "Uncorrectables": "0"
+  },
+  {
+   "__id": "4",
+   "Octets": "3657015536",
+   "Correcteds": "14042",
+   "Uncorrectables": "0"
+  },
+  {
+   "__id": "5",
+   "Octets": "3636578567",
+   "Correcteds": "13263",
+   "Uncorrectables": "0"
+  },
+  {
+   "__id": "6",
+   "Octets": "3636586978",
+   "Correcteds": "13162",
+   "Uncorrectables": "0"
+  },
+  {
+   "__id": "7",
+   "Octets": "3636609556",
+   "Correcteds": "12954",
+   "Uncorrectables": "0"
+  },
+  {
+   "__id": "8",
+   "Octets": "3636616545",
+   "Correcteds": "12531",
+   "Uncorrectables": "0"
+  },
+  {
+   "__id": "9",
+   "Octets": "3636641626",
+   "Correcteds": "12836",
+   "Uncorrectables": "0"
+  },
+  {
+   "__id": "10",
+   "Octets": "3636644175",
+   "Correcteds": "13041",
+   "Uncorrectables": "0"
+  },
+  {
+   "__id": "11",
+   "Octets": "3636653653",
+   "Correcteds": "12932",
+   "Uncorrectables": "0"
+  },
+  {
+   "__id": "12",
+   "Octets": "3636661016",
+   "Correcteds": "13364",
+   "Uncorrectables": "0"
+  },
+  {
+   "__id": "13",
+   "Octets": "3636671329",
+   "Correcteds": "14010",
+   "Uncorrectables": "0"
+  },
+  {
+   "__id": "14",
+   "Octets": "3636677013",
+   "Correcteds": "14680",
+   "Uncorrectables": "0"
+  },
+  {
+   "__id": "15",
+   "Octets": "3636677844",
+   "Correcteds": "14620",
+   "Uncorrectables": "0"
+  },
+  {
+   "__id": "16",
+   "Octets": "3636687986",
+   "Correcteds": "15075",
+   "Uncorrectables": "0"
+  },
+  {
+   "__id": "17",
+   "Octets": "682970672",
+   "Correcteds": "2237820850",
+   "Uncorrectables": "0"
+  }
+ ],
+ "LogTbl": [
+  {
+   "__id": "1",
+   "time": "Thu Jan  1 01:14:41 1970\n",
+   "id": "84000100",
+   "level": "3",
+   "text": "SYNC Timing Synchronization failure - Failed to acquire QAM/QPSK symbol timing;;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "2",
+   "time": "Tue Nov  3 10:37:17 2026\n",
+   "id": "2436694084",
+   "level": "6",
+   "text": "Cable Modem Reboot due to power reset;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "3",
+   "time": "Tue Nov  3 10:37:18 2026\n",
+   "id": "67061600",
+   "level": "6",
+   "text": "DS profile assignment change. DS Chan ID: 32; Previous Profile: ; New Profile: 1 2 3.;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "4",
+   "time": "Tue Nov  3 10:37:27 2026\n",
+   "id": "2436694082",
+   "level": "6",
+   "text": "REGISTRATION COMPLETE - Waiting for Operational status;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "5",
+   "time": "Tue Nov  3 10:37:29 2026\n",
+   "id": "2436694083",
+   "level": "6",
+   "text": "CM State is operational;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "6",
+   "time": "Tue Nov  3 10:37:29 2026\n",
+   "id": "69010200",
+   "level": "6",
+   "text": "SW Download INIT - Via Config file cga437_obe_mobnet9_s4_notv_novoip_prod.cm"
+  },
+  {
+   "__id": "7",
+   "time": "Tue Nov  3 11:39:41 2026\n",
+   "id": "69011200",
+   "level": "6",
+   "text": "SW download Successful - Via Config file"
+  },
+  {
+   "__id": "8",
+   "time": "Thu Jan  1 01:00:27 1970\n",
+   "id": "84000100",
+   "level": "3",
+   "text": "SYNC Timing Synchronization failure - Failed to acquire QAM/QPSK symbol timing;;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "9",
+   "time": "Tue Nov  3 10:42:07 2026\n",
+   "id": "67061600",
+   "level": "6",
+   "text": "DS profile assignment change. DS Chan ID: 32; Previous Profile: ; New Profile: 1 2 3.;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "10",
+   "time": "Tue Nov  3 10:42:16 2026\n",
+   "id": "2436694082",
+   "level": "6",
+   "text": "REGISTRATION COMPLETE - Waiting for Operational status;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "11",
+   "time": "Tue Nov  3 10:42:18 2026\n",
+   "id": "2436694083",
+   "level": "6",
+   "text": "CM State is operational;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "12",
+   "time": "Tue Nov  3 11:57:43 2026\n",
+   "id": "2436694044",
+   "level": "3",
+   "text": "Resetting the cable modem due to docsDevResetNow"
+  },
+  {
+   "__id": "13",
+   "time": "Tue Nov  3 10:59:25 2026\n",
+   "id": "84000100",
+   "level": "3",
+   "text": "SYNC Timing Synchronization failure - Failed to acquire QAM/QPSK symbol timing;;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "14",
+   "time": "Tue Nov  3 10:59:37 2026\n",
+   "id": "2436694066",
+   "level": "6",
+   "text": "Honoring MDD; IP provisioning mode = IPv4"
+  },
+  {
+   "__id": "15",
+   "time": "Tue Nov  3 10:59:39 2026\n",
+   "id": "68000300",
+   "level": "5",
+   "text": "DHCP WARNING - Non-critical field invalid in response ;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "16",
+   "time": "Tue Nov  3 10:59:52 2026\n",
+   "id": "67061600",
+   "level": "6",
+   "text": "DS profile assignment change. DS Chan ID: 32; Previous Profile: ; New Profile: 1 2 3.;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "17",
+   "time": "Tue Nov  3 11:00:00 2026\n",
+   "id": "2436694082",
+   "level": "6",
+   "text": "REGISTRATION COMPLETE - Waiting for Operational status;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "18",
+   "time": "Tue Nov  3 11:00:03 2026\n",
+   "id": "2436694083",
+   "level": "6",
+   "text": "CM State is operational;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "19",
+   "time": "Thu Nov  5 22:11:02 2026\n",
+   "id": "82000600",
+   "level": "3",
+   "text": "Unicast Maintenance Ranging attempted - No response - Retries exhausted;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "20",
+   "time": "Thu Nov  5 22:11:02 2026\n",
+   "id": "82000800",
+   "level": "3",
+   "text": "16 consecutive T3 timeouts while trying to range on upstream channel 8;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "21",
+   "time": "Thu Nov  5 22:37:53 2026\n",
+   "id": "82000400",
+   "level": "3",
+   "text": "Received Response to Broadcast Maintenance Request, But no Unicast Maintenance opportunities received - T4 time out;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "22",
+   "time": "Thu Nov  5 22:38:10 2026\n",
+   "id": "82000200",
+   "level": "3",
+   "text": "No Ranging Response received - T3 time-out;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "23",
+   "time": "Thu Nov  5 22:38:11 2026\n",
+   "id": "82000400",
+   "level": "3",
+   "text": "Received Response to Broadcast Maintenance Request, But no Unicast Maintenance opportunities received - T4 time out;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "24",
+   "time": "Thu Nov  5 22:38:19 2026\n",
+   "id": "82000200",
+   "level": "3",
+   "text": "No Ranging Response received - T3 time-out;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "25",
+   "time": "Thu Nov  5 22:38:41 2026\n",
+   "id": "82000500",
+   "level": "3",
+   "text": "Started Unicast Maintenance Ranging - No Response received - T3 time-out;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "26",
+   "time": "Thu Nov  5 22:38:53 2026\n",
+   "id": "2436694066",
+   "level": "6",
+   "text": "Honoring MDD; IP provisioning mode = IPv4"
+  },
+  {
+   "__id": "27",
+   "time": "Thu Nov  5 22:39:03 2026\n",
+   "id": "68000200",
+   "level": "3",
+   "text": "DHCP FAILED - Request sent, No response;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "28",
+   "time": "Thu Nov  5 22:39:19 2026\n",
+   "id": "68000300",
+   "level": "5",
+   "text": "DHCP WARNING - Non-critical field invalid in response ;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "29",
+   "time": "Thu Nov  5 21:39:31 2026\n",
+   "id": "67061600",
+   "level": "6",
+   "text": "DS profile assignment change. DS Chan ID: 32; Previous Profile: ; New Profile: 1 2 3.;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "30",
+   "time": "Thu Nov  5 21:39:38 2026\n",
+   "id": "2436694082",
+   "level": "6",
+   "text": "REGISTRATION COMPLETE - Waiting for Operational status;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  },
+  {
+   "__id": "31",
+   "time": "Thu Nov  5 21:39:40 2026\n",
+   "id": "2436694083",
+   "level": "6",
+   "text": "CM State is operational;CM-MAC=00:00:00:00:00:00;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.1;"
+  }
+ ]
+}

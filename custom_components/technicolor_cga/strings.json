@@ -1,0 +1,158 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Technicolor CGA cable gateway",
+        "description": "Address and login of the gateway's local web interface. The gateway allows one web session at a time: while you are logged in to its web interface, polling pauses.",
+        "data": {
+          "host": "Address",
+          "username": "Username",
+          "password": "Password",
+          "take_over_session": "End other web sessions"
+        },
+        "data_description": {
+          "host": "Usually 192.168.0.1 in router mode, or 192.168.100.1.",
+          "username": "The login of the web interface, usually \"user\".",
+          "take_over_session": "Log in even when someone is logged in to the web interface, which logs them out. Leave this off to keep the web interface usable."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Log in again",
+        "description": "The gateway rejected the stored password.",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot reach the gateway, or it gave an unexpected answer.",
+      "invalid_auth": "Wrong username or password.",
+      "invalid_host": "Enter only the address, without a path.",
+      "session_busy": "Someone is logged in to the gateway's web interface. Log out there, or enable \"End other web sessions\".",
+      "locked_out": "The gateway blocks logins after failed attempts. Wait a few minutes and try again."
+    },
+    "abort": {
+      "already_configured": "This gateway is already configured.",
+      "reauth_successful": "Logged in again."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "data": {
+          "scan_interval": "Polling interval (seconds)",
+          "take_over_session": "End other web sessions"
+        },
+        "data_description": {
+          "take_over_session": "Log in even when someone is logged in to the web interface, which logs them out."
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "cable_connection": {
+        "name": "Cable connection"
+      },
+      "web_session_busy": {
+        "name": "Web interface in use"
+      }
+    },
+    "event": {
+      "docsis_log": {
+        "name": "DOCSIS log",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "disconnection": "Reconnection after an outage",
+              "reboot": "Reboot",
+              "t3_timeout": "T3 timeout",
+              "t4_timeout": "T4 timeout",
+              "sync_loss": "Loss of sync",
+              "dhcp_failure": "DHCP failure",
+              "other": "Other"
+            }
+          }
+        }
+      }
+    },
+    "sensor": {
+      "docsis_status": {
+        "name": "DOCSIS status"
+      },
+      "downstream_power": {
+        "name": "Downstream power"
+      },
+      "downstream_power_min": {
+        "name": "Downstream power min"
+      },
+      "downstream_power_max": {
+        "name": "Downstream power max"
+      },
+      "downstream_snr": {
+        "name": "Downstream SNR"
+      },
+      "downstream_snr_min": {
+        "name": "Downstream SNR min"
+      },
+      "ofdm_power": {
+        "name": "OFDM power"
+      },
+      "ofdm_snr": {
+        "name": "OFDM SNR"
+      },
+      "upstream_power": {
+        "name": "Upstream power"
+      },
+      "upstream_power_max": {
+        "name": "Upstream power max"
+      },
+      "downstream_channels": {
+        "name": "Downstream channels"
+      },
+      "upstream_channels": {
+        "name": "Upstream channels"
+      },
+      "corrected_codewords": {
+        "name": "Corrected codewords"
+      },
+      "uncorrectable_codewords": {
+        "name": "Uncorrectable codewords"
+      },
+      "disconnections": {
+        "name": "Disconnections"
+      },
+      "reboots": {
+        "name": "Reboots"
+      },
+      "t3_timeouts": {
+        "name": "T3 timeouts"
+      },
+      "t4_timeouts": {
+        "name": "T4 timeouts"
+      },
+      "sync_losses": {
+        "name": "Losses of sync"
+      },
+      "dhcp_failures": {
+        "name": "DHCP failures"
+      },
+      "last_log_event": {
+        "name": "Last log event"
+      },
+      "last_boot": {
+        "name": "Last boot"
+      },
+      "cpu_usage": {
+        "name": "CPU usage"
+      },
+      "memory_usage": {
+        "name": "Memory usage"
+      },
+      "last_reboot_reason": {
+        "name": "Last reboot reason"
+      }
+    }
+  }
+}

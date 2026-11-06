@@ -1,0 +1,158 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Passerelle câble Technicolor CGA",
+        "description": "Adresse et identifiants de l'interface web locale. La passerelle n'accepte qu'une session web à la fois : quand tu es connecté à son interface web, les relevés se mettent en pause.",
+        "data": {
+          "host": "Adresse",
+          "username": "Nom d'utilisateur",
+          "password": "Mot de passe",
+          "take_over_session": "Fermer les autres sessions web"
+        },
+        "data_description": {
+          "host": "En général 192.168.0.1 en mode routeur, ou 192.168.100.1.",
+          "username": "L'identifiant de l'interface web, en général « user ».",
+          "take_over_session": "Se connecter même si quelqu'un est connecté à l'interface web, ce qui le déconnecte. Laisser désactivé pour garder l'interface web utilisable."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Se reconnecter",
+        "description": "La passerelle a refusé le mot de passe enregistré.",
+        "data": {
+          "password": "Mot de passe"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Impossible de joindre la passerelle, ou réponse inattendue.",
+      "invalid_auth": "Nom d'utilisateur ou mot de passe incorrect.",
+      "invalid_host": "Indique seulement l'adresse, sans chemin.",
+      "session_busy": "Quelqu'un est connecté à l'interface web de la passerelle. Déconnecte-toi, ou active « Fermer les autres sessions web ».",
+      "locked_out": "La passerelle bloque les connexions après des échecs. Attends quelques minutes puis réessaie."
+    },
+    "abort": {
+      "already_configured": "Cette passerelle est déjà configurée.",
+      "reauth_successful": "Reconnecté."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "data": {
+          "scan_interval": "Intervalle de relevé (secondes)",
+          "take_over_session": "Fermer les autres sessions web"
+        },
+        "data_description": {
+          "take_over_session": "Se connecter même si quelqu'un est connecté à l'interface web, ce qui le déconnecte."
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "cable_connection": {
+        "name": "Connexion câble"
+      },
+      "web_session_busy": {
+        "name": "Interface web utilisée"
+      }
+    },
+    "event": {
+      "docsis_log": {
+        "name": "Journal DOCSIS",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "disconnection": "Reconnexion après coupure",
+              "reboot": "Redémarrage",
+              "t3_timeout": "Timeout T3",
+              "t4_timeout": "Timeout T4",
+              "sync_loss": "Perte de synchronisation",
+              "dhcp_failure": "Échec DHCP",
+              "other": "Autre"
+            }
+          }
+        }
+      }
+    },
+    "sensor": {
+      "docsis_status": {
+        "name": "État DOCSIS"
+      },
+      "downstream_power": {
+        "name": "Puissance descendante"
+      },
+      "downstream_power_min": {
+        "name": "Puissance descendante min"
+      },
+      "downstream_power_max": {
+        "name": "Puissance descendante max"
+      },
+      "downstream_snr": {
+        "name": "SNR descendant"
+      },
+      "downstream_snr_min": {
+        "name": "SNR descendant min"
+      },
+      "ofdm_power": {
+        "name": "Puissance OFDM"
+      },
+      "ofdm_snr": {
+        "name": "SNR OFDM"
+      },
+      "upstream_power": {
+        "name": "Puissance montante"
+      },
+      "upstream_power_max": {
+        "name": "Puissance montante max"
+      },
+      "downstream_channels": {
+        "name": "Canaux descendants"
+      },
+      "upstream_channels": {
+        "name": "Canaux montants"
+      },
+      "corrected_codewords": {
+        "name": "Mots de code corrigés"
+      },
+      "uncorrectable_codewords": {
+        "name": "Mots de code non corrigeables"
+      },
+      "disconnections": {
+        "name": "Déconnexions"
+      },
+      "reboots": {
+        "name": "Redémarrages"
+      },
+      "t3_timeouts": {
+        "name": "Timeouts T3"
+      },
+      "t4_timeouts": {
+        "name": "Timeouts T4"
+      },
+      "sync_losses": {
+        "name": "Pertes de synchronisation"
+      },
+      "dhcp_failures": {
+        "name": "Échecs DHCP"
+      },
+      "last_log_event": {
+        "name": "Dernier événement du journal"
+      },
+      "last_boot": {
+        "name": "Dernier démarrage"
+      },
+      "cpu_usage": {
+        "name": "Utilisation CPU"
+      },
+      "memory_usage": {
+        "name": "Utilisation mémoire"
+      },
+      "last_reboot_reason": {
+        "name": "Raison du dernier redémarrage"
+      }
+    }
+  }
+}
