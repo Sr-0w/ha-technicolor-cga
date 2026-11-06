@@ -152,6 +152,18 @@
       },
       "last_reboot_reason": {
         "name": "Raison du dernier redémarrage"
+      },
+      "wifi_log": {
+        "name": "Journal Wi-Fi"
+      },
+      "system_log": {
+        "name": "Journal système"
+      },
+      "security_log": {
+        "name": "Journal de sécurité"
+      },
+      "wifi_radio_resets": {
+        "name": "Réinitialisations radio Wi-Fi"
       }
     }
   }

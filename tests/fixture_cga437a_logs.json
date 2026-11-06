@@ -1,0 +1,82 @@
+{
+ "report": {
+  "LogTbl": [
+   {
+    "__id": "1",
+    "time": "2026-11-06 09:57:00 ",
+    "Type": "Critical",
+    "Count": "291",
+    "FirstTime": "2026-11-03 10:39:04",
+    "Des": "[10000008]: 291,2026-11-03 10:39:04 UTOPIA: FW.IPv6 FORWARD drop"
+   },
+   {
+    "__id": "2",
+    "time": "2026-11-05 20:57:00 ",
+    "Type": "Critical",
+    "Count": "428",
+    "FirstTime": "2026-11-03 09:33:04",
+    "Des": "[10000007]: 428,2026-11-03 09:33:04 UTOPIA: Internet IPv6 Attacking blocked"
+   }
+  ],
+  "WiFiLogTbl": [
+   {
+    "__id": "1",
+    "Time": "2026-11-06 13:40:17 ",
+    "ID": "88000205",
+    "Count": "204",
+    "FirstTime": "2026-11-06 10:47:44",
+    "Des": "[88000205]: 204,2026-11-06 10:47:44 Radio=wl0 Interface Reset ,Link is Up."
+   },
+   {
+    "__id": "2",
+    "Time": "2026-11-06 10:53:51 ",
+    "ID": "88000101",
+    "Count": "4715",
+    "FirstTime": "2026-11-06 10:12:38",
+    "Des": "[88000101]: 4715,2026-11-06 10:12:38 Radio=wl1; Device Associated. WG-MAC=F4:DD:06:00:00:00;SSID=&quot;Orange-2b5Vr&quot;;On Channel=100;Sec-Mode=68."
+   },
+   {
+    "__id": "3",
+    "Time": "2026-11-06 10:53:51 ",
+    "ID": "88000101",
+    "Count": "4714",
+    "FirstTime": "2026-11-06 10:12:38",
+    "Des": "[88000101]: 4714,2026-11-06 10:12:38 Radio=wl1; Device Associated. WG-MAC=10:E1:8E:00:00:00;SSID=&quot;Orange-2b5Vr&quot;;On Channel=100;Sec-Mode=68."
+   }
+  ]
+ },
+ "remotelog": {
+  "SysTbl": [
+   {
+    "__id": "2",
+    "date": "2026-11-03 18:00:23 ",
+    "type": "Notice",
+    "category": "System",
+    "msg": "[PortMapping]: 6,2026-11-03 12:42:22 ADD: TCP/UDP ExternelPort(s) 21820~21820InternelPort 21820 IP 192.168.0.10 Active"
+   },
+   {
+    "__id": "3",
+    "date": "2026-11-03 18:00:23 ",
+    "type": "Notice",
+    "category": "System",
+    "msg": "[PortMapping]: 5,2026-11-03 12:42:22 ADD: TCP/UDP ExternelPort(s) 51820~51820InternelPort 51820 IP 192.168.0.10 Active"
+   }
+  ],
+  "eRouterTbl": [
+   {
+    "__id": "1",
+    "date": "2026-11-06 10:53:50 ",
+    "type": "Critical",
+    "category": "eRouter",
+    "msg": "[72001013]: 9,2026-11-05 21:40:13 OFI - ADDRESS released"
+   },
+   {
+    "__id": "2",
+    "date": "2026-11-06 10:53:50 ",
+    "type": "Critical",
+    "category": "eRouter",
+    "msg": "[72001013]: 10,2026-11-05 21:40:13 OFI - ADDRESS released"
+   }
+  ]
+ }
+}

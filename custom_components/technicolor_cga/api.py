@@ -36,6 +36,8 @@ SYSTEM_FIELDS = (
     "LocalTime",
 )
 MODEM_FIELDS = ("DSTbl", "exDSTbl", "USTbl", "exUSTbl", "ErrTbl", "LogTbl")
+# Wi-Fi and security logs, then system and eRouter logs.
+LOG_PAGES = ("report", "remotelog")
 
 MSG_SESSION_BUSY = "MSG_LOGIN_150"
 
@@ -184,6 +186,20 @@ class GatewayClient:
                     continue
                 return {"system": system, "modem": modem}
         raise GatewayError("unreachable")
+
+    async def async_get_logs(self) -> dict[str, Any]:
+        """Return the Wi-Fi, security and system log pages."""
+        async with self._lock:
+            for attempt in range(2):
+                if not self._authenticated:
+                    await self._login()
+                try:
+                    return {page: await self._read(page) for page in LOG_PAGES}
+                except AuthenticationError:
+                    self._authenticated = False
+                    if attempt:
+                        raise GatewayError("Session lost twice in a row") from None
+            raise GatewayError("unreachable")
 
     @property
     def authenticated(self) -> bool:

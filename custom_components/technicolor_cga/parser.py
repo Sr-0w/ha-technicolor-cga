@@ -7,6 +7,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import datetime, tzinfo
+import html
 import re
 from typing import Any
 
@@ -143,6 +144,63 @@ def parse_log(rows: Any, tz: tzinfo) -> list[LogEntry]:
             )
         )
     return entries
+
+
+# "[88000205]: 204,2026-11-06 10:47:44 Radio=wl0 Interface Reset ,Link is Up."
+# The gateway folds repeats of one message into a row: id, count, first time.
+_GATEWAY_LOG = re.compile(
+    r"^\[(?P<id>[^\]]+)\]:\s*(?P<count>\d+),(?P<first>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\s*(?P<text>.*)$",
+    re.S,
+)
+WIFI_RADIO_RESET = "88000205"
+GATEWAY_LOG_LIMIT = 20
+
+
+def parse_local_time(value: Any, tz: tzinfo) -> datetime | None:
+    """Parse '2026-11-06 13:40:17' in the gateway's local time."""
+    try:
+        parsed = datetime.strptime(str(value).strip(), "%Y-%m-%d %H:%M:%S")
+    except ValueError:
+        return None
+    return None if parsed.year < 2000 else parsed.replace(tzinfo=tz)
+
+
+def _gateway_rows(rows: Any, tz: tzinfo, time_key: str, text_key: str, level_key: str | None) -> list[dict[str, Any]]:
+    out: list[dict[str, Any]] = []
+    for row in rows if isinstance(rows, list) else []:
+        if not isinstance(row, dict):
+            continue
+        raw = html.unescape(str(row.get(text_key, ""))).strip()
+        match = _GATEWAY_LOG.match(raw)
+        last = parse_local_time(row.get(time_key), tz)
+        first = parse_local_time(match["first"], tz) if match else None
+        out.append(
+            {
+                "time": last.isoformat() if last else None,
+                "first": first.isoformat() if first else None,
+                "count": int(match["count"]) if match else None,
+                "id": match["id"] if match else None,
+                "level": str(row.get(level_key) or "").strip() or None if level_key else None,
+                "text": " ".join((match["text"] if match else raw).split()),
+            }
+        )
+    return out
+
+
+def parse_gateway_logs(report: Any, remotelog: Any, tz: tzinfo) -> dict[str, list[dict[str, Any]]]:
+    """The Wi-Fi, system and security logs of the gateway, newest first."""
+    report = report if isinstance(report, dict) else {}
+    remotelog = remotelog if isinstance(remotelog, dict) else {}
+    logs = {
+        "wifi": _gateway_rows(report.get("WiFiLogTbl"), tz, "Time", "Des", None),
+        "security": _gateway_rows(report.get("LogTbl"), tz, "time", "Des", "Type"),
+        "system": _gateway_rows(remotelog.get("SysTbl"), tz, "date", "msg", "type")
+        + _gateway_rows(remotelog.get("eRouterTbl"), tz, "date", "msg", "type"),
+    }
+    for key, entries in logs.items():
+        entries.sort(key=lambda e: e["time"] or "", reverse=True)
+        logs[key] = entries[:GATEWAY_LOG_LIMIT]
+    return logs
 
 
 def _channel_rows(rows: Any) -> list[dict[str, Any]]:

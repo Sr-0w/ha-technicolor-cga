@@ -92,3 +92,21 @@ class TimeoutSpellingTest(unittest.TestCase):
         self.assertEqual(categorize(text), CATEGORY_T4_TIMEOUT)
         self.assertEqual(categorize("No Ranging Response received - T3 time-out"), CATEGORY_T3_TIMEOUT)
         self.assertEqual(categorize("No Ranging Response received - T3 timeout"), CATEGORY_T3_TIMEOUT)
+
+
+class GatewayLogsTest(unittest.TestCase):
+    """Wi-Fi, system and security logs of a CGA437A."""
+
+    def test_real_logs(self):
+        pages = json.loads((Path(__file__).parent / "fixture_cga437a_logs.json").read_text())
+        logs = parser.parse_gateway_logs(pages["report"], pages["remotelog"], ZoneInfo("Europe/Brussels"))
+        self.assertEqual(set(logs), {"wifi", "system", "security"})
+        reset = logs["wifi"][0]
+        self.assertEqual(reset["id"], parser.WIFI_RADIO_RESET)
+        self.assertEqual(reset["count"], 204)
+        self.assertEqual(reset["text"], "Radio=wl0 Interface Reset ,Link is Up.")
+        self.assertEqual(reset["first"], "2026-11-06T10:47:44+01:00")
+        self.assertTrue(all(e["text"] and e["time"] for v in logs.values() for e in v))
+        times = [e["time"] for e in logs["system"]]
+        self.assertEqual(times, sorted(times, reverse=True))
+        self.assertIn('"', logs["wifi"][1]["text"])  # &quot; decoded

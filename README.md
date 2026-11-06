@@ -29,6 +29,8 @@ and are likely to work; reports are welcome.
 | T3 timeouts, T4 timeouts, losses of sync, DHCP failures | Counted from the log. |
 | Last log event | Time of the newest log line, with the recent lines as attributes. |
 | DOCSIS log (event entity) | Fires once per new log line, typed `disconnection`, `reboot`, `t3_timeout`, `t4_timeout`, `sync_loss`, `dhcp_failure` or `other`: handy for automations and the logbook. |
+| Wi-Fi log, system log, security log | Time of the newest entry of each gateway log (Wi-Fi events, system and eRouter events, firewall), with the last 20 entries as attributes. Read every 5 minutes. |
+| Wi-Fi radio resets | The gateway's own count of *Radio … Interface Reset* events. A count that keeps rising means the Wi-Fi radio restarts over and over. |
 | Last boot, CPU, memory, last reboot reason | Diagnostics. |
 | Web interface in use | On while polling is paused, see below. |
 

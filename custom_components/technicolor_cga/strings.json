@@ -152,6 +152,18 @@
       },
       "last_reboot_reason": {
         "name": "Last reboot reason"
+      },
+      "wifi_log": {
+        "name": "Wi-Fi log"
+      },
+      "system_log": {
+        "name": "System log"
+      },
+      "security_log": {
+        "name": "Security log"
+      },
+      "wifi_radio_resets": {
+        "name": "Wi-Fi radio resets"
       }
     }
   }

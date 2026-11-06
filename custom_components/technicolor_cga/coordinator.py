@@ -28,12 +28,13 @@ from .const import (
     BUSY_BACKOFF_MAX,
     BUSY_BACKOFF_START,
     DEFAULT_SCAN_INTERVAL,
+    GATEWAY_LOG_INTERVAL,
     DOMAIN,
     SEEN_LOG_LIMIT,
     SIGNAL_LOG_EVENT,
     STORAGE_VERSION,
 )
-from .parser import CATEGORIES, LogEntry, number, parse_log, summarize_channels
+from .parser import CATEGORIES, LogEntry, number, parse_gateway_logs, parse_log, summarize_channels
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -86,6 +87,8 @@ class GatewayCoordinator(DataUpdateCoordinator[GatewayData]):
         # refresh runs before platforms are set up) wait here.
         self._log_listener_ready = False
         self._undelivered: list[LogEntry] = []
+        self._gateway_logs: dict[str, Any] = {}
+        self._next_gateway_logs = 0.0
 
     async def async_load_state(self) -> None:
         """Restore counters and the already counted log lines."""
@@ -180,12 +183,28 @@ class GatewayCoordinator(DataUpdateCoordinator[GatewayData]):
         self._count_new_log_entries(log)
         self._track_uptime(number(system.get("UpTime")))
         self._save_state()
+        await self._refresh_gateway_logs()
         return GatewayData(
             system=system,
             summary=summarize_channels(modem),
             log=log,
             last_boot=self._last_boot,
             counters=dict(self._counters),
+            extra={"logs": self._gateway_logs},
+        )
+
+    async def _refresh_gateway_logs(self) -> None:
+        if time.monotonic() < self._next_gateway_logs:
+            return
+        self._next_gateway_logs = time.monotonic() + GATEWAY_LOG_INTERVAL
+        try:
+            pages = await self.client.async_get_logs()
+        except GatewayError as err:
+            # The logs are a bonus: keep the last ones and try again later.
+            _LOGGER.debug("Could not read the gateway logs: %s", err)
+            return
+        self._gateway_logs = parse_gateway_logs(
+            pages.get("report"), pages.get("remotelog"), dt_util.get_default_time_zone()
         )
 
     def _count_new_log_entries(self, log: list[LogEntry]) -> None:

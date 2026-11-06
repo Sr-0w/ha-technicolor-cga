@@ -17,5 +17,7 @@ BUSY_BACKOFF_MAX = 900
 
 STORAGE_VERSION = 1
 SEEN_LOG_LIMIT = 500
+# The Wi-Fi, system and security logs change slowly: read them every 5 minutes.
+GATEWAY_LOG_INTERVAL = 300
 
 SIGNAL_LOG_EVENT = f"{DOMAIN}_log_event_{{}}"

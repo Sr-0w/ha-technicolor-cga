@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from collections.abc import Callable
 from dataclasses import dataclass
+from datetime import datetime
 from typing import Any
 
 from homeassistant.components.sensor import (
@@ -25,6 +26,7 @@ from .parser import (
     CATEGORY_SYNC_LOSS,
     CATEGORY_T3_TIMEOUT,
     CATEGORY_T4_TIMEOUT,
+    WIFI_RADIO_RESET,
     number,
 )
 
@@ -94,6 +96,29 @@ def _recent_log(data: GatewayData) -> dict[str, Any]:
     return {"message": lines[0]["text"] if lines else None, "recent": lines}
 
 
+def _gateway_log_entries(data: GatewayData, kind: str) -> list[dict[str, Any]]:
+    return (data.extra.get("logs") or {}).get(kind) or []
+
+
+def _gateway_log_time(kind: str) -> Callable[[GatewayData], Any]:
+    def value(data: GatewayData) -> datetime | None:
+        entries = _gateway_log_entries(data, kind)
+        return datetime.fromisoformat(entries[0]["time"]) if entries and entries[0]["time"] else None
+    return value
+
+
+def _gateway_log_attrs(kind: str) -> Callable[[GatewayData], dict[str, Any]]:
+    def attrs(data: GatewayData) -> dict[str, Any]:
+        entries = _gateway_log_entries(data, kind)
+        return {"message": entries[0]["text"] if entries else None, "recent": entries}
+    return attrs
+
+
+def _wifi_radio_resets(data: GatewayData) -> int | None:
+    counts = [e["count"] for e in _gateway_log_entries(data, "wifi") if e["id"] == WIFI_RADIO_RESET and e["count"] is not None]
+    return max(counts) if counts else None
+
+
 SENSORS: tuple[GatewaySensorDescription, ...] = (
     GatewaySensorDescription(
         key="docsis_status",
@@ -157,6 +182,33 @@ SENSORS: tuple[GatewaySensorDescription, ...] = (
         device_class=SensorDeviceClass.TIMESTAMP,
         value_fn=_last_event,
         attrs_fn=_recent_log,
+    ),
+    GatewaySensorDescription(
+        key="wifi_log",
+        translation_key="wifi_log",
+        device_class=SensorDeviceClass.TIMESTAMP,
+        value_fn=_gateway_log_time("wifi"),
+        attrs_fn=_gateway_log_attrs("wifi"),
+    ),
+    GatewaySensorDescription(
+        key="system_log",
+        translation_key="system_log",
+        device_class=SensorDeviceClass.TIMESTAMP,
+        value_fn=_gateway_log_time("system"),
+        attrs_fn=_gateway_log_attrs("system"),
+    ),
+    GatewaySensorDescription(
+        key="security_log",
+        translation_key="security_log",
+        device_class=SensorDeviceClass.TIMESTAMP,
+        value_fn=_gateway_log_time("security"),
+        attrs_fn=_gateway_log_attrs("security"),
+    ),
+    GatewaySensorDescription(
+        key="wifi_radio_resets",
+        translation_key="wifi_radio_resets",
+        state_class=SensorStateClass.TOTAL_INCREASING,
+        value_fn=_wifi_radio_resets,
     ),
     GatewaySensorDescription(
         key="last_boot",
